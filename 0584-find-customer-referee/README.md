@@ -46,3 +46,14 @@ Customer table:
 | Zack |
 +------+
 </pre>
+
+
+
+ ### learn COALSCE function
+ ```python
+ SELECT name, COALESCE(email, 'Not available') AS email
+FROM employees;
+ ```
+**In this query, the COALESCE function will check if the "email" column has a non-null value for each row. If the email is not null, it will be displayed in the result. If it is null, the COALESCE function will return the fallback value 'Not available,' and that value will be displayed in the result instead of null.
+
+COALESCE is a helpful function for handling null values and providing meaningful default values in SQL queries. It ensures that the query results are more informative and easier to work with, especially when dealing with missing data.**
